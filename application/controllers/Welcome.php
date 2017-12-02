@@ -31,6 +31,20 @@ class Welcome extends CI_Controller {
         $data['featured_product'] = $this->load->view('pages/featured_product', $data, TRUE);
         $this->load->view('master', $data);
     }
+    public function category_product($product_category){
+        $data=array();
+        $data['slider'] = $this->load->view('pages/slider','', TRUE);
+        $data['all_category_product']=  $this->load->welcome_model->category_product($product_category);
+        $data['featured_product'] = $this->load->view('pages/category_product',$data, TRUE);
+        $this->load->view('master',$data);
+    }
+    public function manufacturer_product($product_manufacturer){
+        $data=array();
+        $data['slider'] = $this->load->view('pages/slider','', TRUE);
+        $data['all_manufacturer_product']=  $this->load->welcome_model->manufacturer_product($product_manufacturer);
+        $data['featured_product'] = $this->load->view('pages/manufacturer_product',$data, TRUE);
+        $this->load->view('master',$data);
+    } 
 
     public function accounts() {
         $data = array();

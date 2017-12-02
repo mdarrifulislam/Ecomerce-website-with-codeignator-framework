@@ -49,15 +49,28 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
+$route['manufacturer-product/(.+)']='welcome/manufacturer_product/$1';
+$route['category-product/(.+)']='welcome/category_product/$1';//manufacturer-product
+$route['product-edit/(.+)']='products/product_edit/$1'; //category-product
+$route['product-delete/(.+)']='products/product_delete/$1';
+$route['product-inactive/(.+)']='products/product_inactive/$1';
+$route['product-active/(.+)']='products/product_active/$1';
 $route['manage-product']='products/manage_products';
 $route['add-product']='products/add_products';
+
+
 $route['edit-category/(.+)']= 'products/edit_category/$1';
 $route['change-category-status/(.+)/(.+)']='products/change_category_status/$1/$2';
 $route['all-category']='products/show_all_category';
 $route['add-category']='products/show_add_category_from';
+$route['add-manufacturer']='products/add_manufacturer';
+$route['manage-manufacturer']='products/manage_manufacturer';
+$route['change-manufacturer-status/(.+)/(.+)']='products/change_manufacturer_status/$1/$2';
+$route['edit-manufacturer-form/(.+)']='products/edit_manufacturer_form/$1';
+
 
 $route['register-admin']='admin/show_admin_register_form';
-$route['admin-logout'] = 'admin_login/admin_logout';
+$route['admin-logout'] ='admin_login/admin_logout';
 $route['admin-dashboard'] = 'admin/show_dashboard';
 $route['admin-login'] = 'admin_login/check_admin_login';
 $route['admin'] = 'admin_login';

@@ -19,20 +19,7 @@
         <link id="base-style" href="<?php echo base_url();?>assets/admin_assets/css/style.css" rel="stylesheet">
         <link id="base-style-responsive" href="<?php echo base_url();?>assets/admin_assets/css/style-responsive.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
-        <!-- end: CSS -->
-
-
-        <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
-        <!--[if lt IE 9]>
-                <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-                <link id="ie-style" href="<?php echo base_url();?>assets/admin_assets/css/ie.css" rel="stylesheet">
-        <![endif]-->
-
-        <!--[if IE 9]>
-                <link id="ie9style" href="<?php echo base_url();?>assets/admin_assets/css/ie9.css" rel="stylesheet">
-        <![endif]-->
-
-        <!-- start: Favicon -->
+      
         <link rel="shortcut icon" href="<?php echo base_url();?>assets/admin_assets/img/favicon.ico">
         <!-- end: Favicon -->
 
@@ -336,18 +323,13 @@
                             <li><a href="index.html"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>	
                             <li><a href="<?php echo base_url('register-admin');?>"><i class="icon-envelope"></i><span class="hidden-tablet">Register Admin</span></a></li>
                             <li><a href="<?php echo base_url('add-category')?>"><i class="icon-tasks"></i><span class="hidden-tablet">Add Category</span></a></li>
-                            <li><a href="<?php echo base_url('all-category');?>"><i class="icon-eye-open"></i><span class="hidden-tablet"> All Category</span></a></li>
+                            <li><a href="<?php echo base_url('all-category');?>"><i class="icon-eye-open"></i><span class="hidden-tablet">Manage Category</span></a></li>
+                            <li><a href="<?php echo base_url('add-manufacturer')?>"><i class="icon-tasks"></i><span class="hidden-tablet">Add Manufacture</span></a></li>
+                            <li><a href="<?php echo base_url('manage-manufacturer')?>"><i class="icon-list-alt"></i><span class="hidden-tablet">Manage Manufacturer</span></a></li>
                             <li><a href="<?php echo base_url('add-product');?>"><i class="icon-dashboard"></i><span class="hidden-tablet">Add Product</span></a></li>
-<!--                            <li>
-                                <a class="dropmenu" href="#"><i class="icon-folder-close-alt"></i><span class="hidden-tablet"> Dropdown</span><span class="label label-important"> 3 </span></a>
-                                <ul>
-                                    <li><a class="submenu" href="submenu.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 1</span></a></li>
-                                    <li><a class="submenu" href="submenu2.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 2</span></a></li>
-                                    <li><a class="submenu" href="submenu3.html"><i class="icon-file-alt"></i><span class="hidden-tablet"> Sub Menu 3</span></a></li>
-                                </ul>	
-                            </li>-->
+                           
 <li><a href="<?php echo base_url('manage-product');?>"><i class="icon-edit"></i><span class="hidden-tablet">Manage Product</span></a></li>
-                            <li><a href="chart.html"><i class="icon-list-alt"></i><span class="hidden-tablet"> Charts</span></a></li>
+                            
                             <li><a href="typography.html"><i class="icon-font"></i><span class="hidden-tablet"> Typography</span></a></li>
                             <li><a href="gallery.html"><i class="icon-picture"></i><span class="hidden-tablet"> Gallery</span></a></li>
                             <li><a href="table.html"><i class="icon-align-justify"></i><span class="hidden-tablet"> Tables</span></a></li>

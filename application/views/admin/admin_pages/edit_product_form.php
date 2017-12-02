@@ -1,10 +1,10 @@
 <?php 
 $message = $this->session->message;
-
 if(isset($message)){
     echo $message;
     $this->session->unset_userdata('message');
 }
+
 ?>
 
 
@@ -33,55 +33,39 @@ if(isset($message)){
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Product Name</label>
                         <div class="controls">
-                            <input type="text" value="" class="span6 typeahead"name="product_name" id="typeahead"  data-provide="typeahead" data-items="4" required>
+                            <input type="text" value="<?php echo $product_data->product_name;?>" class="span6 typeahead"name="product_name" id="typeahead"  data-provide="typeahead" data-items="4" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Product Short Description</label>
                         <div class="controls">
-                            <input type="text" value="" class="span6 typeahead" name="product_short_description" id="typeahead"  data-provide="typeahead" data-items="4" required>
+                            <input type="text" value="<?php echo $product_data->product_short_description;?>" class="span6 typeahead" name="product_short_description" id="typeahead"  data-provide="typeahead" data-items="4" required>
                         </div>
                     </div>
                     <div class="control-group hidden-phone">
                         <label class="control-label" for="textarea">Product Long Description</label>
                         <div class="controls">
-                            <textarea class="cleditor" id="text-area" rows="3" name="product_long_description"></textarea>
+                            <textarea class="cleditor" id="text-area" rows="3" name="product_long_description">
+                                <?php echo $product_data->product_long_description;?>
+                            </textarea>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="typeahead">Product Quantity</label>
                         <div class="controls">
-                            <input type="text" value="" class="span6 typeahead" name="product_quantity" id="typeahead"  data-provide="typeahead" data-items="4" required>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Product Price</label>
-                        <div class="controls">
-                            <input type="text" value="" class="span6 typeahead" name="product_price" id="typeahead"  data-provide="typeahead" data-items="4" required>
+                            <input type="text" value="<?php echo $product_data->product_quantity;?>" class="span6 typeahead" name="product_quantity" id="typeahead"  data-provide="typeahead" data-items="4" required>
                         </div>
                     </div>
                     <div class="control-group">
                         <label class="control-label" for="selectError3">Product Category</label>
                         <div class="controls">
-                            <select id="selectError3" name="product_category"> 
+                            <select id="selectError3" name="product_category">
                                 <option>Select Category</option>
                                 <?php 
-                                foreach ($category_info AS $category){  ?>
-                                <option value="<?php echo $category->category_id?>"><?php echo $category->category_name;?></option>
+                                foreach ($product_data->product_category AS $product_category){  ?>
+                                <option value="<?php echo $product_category->category_id?>"><?php echo $product_category->category_name;?></option>
                                 <?php  } ?>
-                             </select>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <label class="control-label" for="selectError3">Product Manufacturer</label>
-                        <div class="controls">
-                            <select id="selectError3" name="product_manufacturer">
-                                <option>Select Manufacturer</option>
-                                <?php 
-                                foreach ($manufacturer_info AS $manufacturer){  ?>
-                                <option value="<?php echo $manufacturer->manufacturer_id?>"><?php echo $manufacturer->manufacturer_name;?></option>
-                                <?php  } ?>
-                             </select>
+                            </select>
                         </div>
                     </div>
                     
@@ -91,15 +75,10 @@ if(isset($message)){
                             <input type="file" value="" class="span6 typeahead"name="product_image" id="typeahead"  data-provide="typeahead" data-items="4" required>
                         </div>
                     </div>
-                    <div class="control-group">
-                        <label class="control-label" for="typeahead">Top Product</label>
-                        <div class="controls">
-                            <input type="checkbox" value="1" class="span6 typeahead" name="top_product">
-                        </div>
-                    </div>
                     
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-primary">Save changes</button>
+                        <button type="submit" class="btn btn-primary"  >Save changes</button>
+                        <button type="reset" class="btn">Cancel</button>
                     </div>
                 </fieldset>
             </form>   

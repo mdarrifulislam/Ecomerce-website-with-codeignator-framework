@@ -8,6 +8,20 @@ class Welcome_model extends CI_Model{
                         ->get()->result();
         return $result;
     }
+    public function category_product($product_category){
+        $result = $this->db->select('*')
+                        ->from('tbl_product')
+                        ->where('product_category',$product_category)
+                        ->get()->result();
+        return $result;
+    }
+    public function manufacturer_product($product_manufacturer){
+        $result = $this->db->select('*')
+                        ->from('tbl_product')
+                        ->where('product_manufacturer',$product_manufacturer)
+                        ->get()->result();
+        return $result;
+    }
     
 }
 

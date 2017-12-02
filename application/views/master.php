@@ -168,7 +168,7 @@
 
                                 <div class="panel panel-default">
                                     <div class="panel-heading">
-                                        <h4 class="panel-title"><a href="#"><?php echo $active_category->category_name;?></a></h4>
+                                        <h4 class="panel-title"><a href="<?php echo base_url("category-product/$active_category->category_id")?>"><?php echo $active_category->category_name;?></a></h4>
                                     </div>
                                 </div>
                                 <?php } ?>
@@ -177,14 +177,14 @@
                             <div class="brands_products"><!--brands_products-->
                                 <h2>Brands</h2>
                                 <div class="brands-name">
+                                    
                                     <ul class="nav nav-pills nav-stacked">
-                                        <li><a href="#"> <span class="pull-right">(50)</span>Acne</a></li>
-                                        <li><a href="#"> <span class="pull-right">(56)</span>Grüne Erde</a></li>
-                                        <li><a href="#"> <span class="pull-right">(27)</span>Albiro</a></li>
-                                        <li><a href="#"> <span class="pull-right">(32)</span>Ronhill</a></li>
-                                        <li><a href="#"> <span class="pull-right">(5)</span>Oddmolly</a></li>
-                                        <li><a href="#"> <span class="pull-right">(9)</span>Boudestijn</a></li>
-                                        <li><a href="#"> <span class="pull-right">(4)</span>Rösch creative culture</a></li>
+                                    <?php 
+                                    $all_manufacturer=$this->products_model->get_all_active_manufacturer();
+                                    foreach ($all_manufacturer as $manufacturer_info){
+                                    ?>
+                                        <li><a href="<?php echo base_url("manufacturer-product/$manufacturer_info->manufacturer_id")?>"> <span class="pull-right"></span><?php echo $manufacturer_info->manufacturer_name;?></a></li>
+                                    <?php }?>
                                     </ul>
                                 </div>
                             </div><!--/brands_products-->

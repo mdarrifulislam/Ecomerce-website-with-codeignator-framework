@@ -1,11 +1,4 @@
-<div style="color:green;">
-   <?php 
  
-   
-   ?>
-    
-    
-</div>
 
  
 <div class="row-fluid sortable">
